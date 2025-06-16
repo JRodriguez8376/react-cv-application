@@ -1,5 +1,4 @@
 import { Children } from "react";
-
 function AreaSection({title, children}) {
     return(
         <div> 

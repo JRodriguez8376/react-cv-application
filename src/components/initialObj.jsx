@@ -14,8 +14,8 @@ const jobExample = {
     endDate: '6/15/2025'
 }
 const schoolExample = {
-    school: "Company Name",
-    study: "Position Title",
+    school: "School Name",
+    study: "Title of Study",
     startDate: '1/1/2000',
     endDate: '6/15/2025'
 }

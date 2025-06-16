@@ -22,6 +22,7 @@ function General({initialPerson}) {
     }
     const showSubmitted = () =>  {
         if(canEdit == false) {
+            // If User is editing, show input fields, otherwise show the inputted data in html
             return(
                 <div>
                 <p>Name: {person.firstName} {person.lastName}</p> 
@@ -33,29 +34,25 @@ function General({initialPerson}) {
         }
         return(
             <div>
-            <p>Name: {person.firstName} {person.lastName}</p> 
-            <input 
+                <input 
                 placeholder={person.firstName}
                 onChange={handleFirstNameChange}
             />
-            <input 
+                <input 
                 placeholder='Enter Last Name'
                 onChange={handleLastNameChange}
             />
-            <p>Phone: {person.phone} </p> 
-            <input 
+            
+                <input 
                 placeholder='Enter Phone Number'
                 onChange={handlePhoneChange}
             />
-            <p>Email: {person.email} </p> 
-            <input 
+                <input 
                 placeholder='Enter Email'
                 onChange={handleEmailChange}
-            />
+                />
             </div>
-        
         )
-        
     }
     return(
         <div>
