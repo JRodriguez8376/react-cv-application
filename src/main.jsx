@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from '../../my-first-react-app/src/App.jsx'
+import App from './App.jsx'
 import AreaSection from './components/AreaSection.jsx'
 import General  from './components/General.jsx'
 import Education from './components/Education.jsx'
