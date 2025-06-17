@@ -33,36 +33,47 @@ function General({initialPerson}) {
             )
         }
         return(
-            <div>
+            <div className='input-container'>
+                <div className='input-box'>
                 <input 
                 placeholder={person.firstName}
                 onChange={handleFirstNameChange}
             />
+                
+           
+              
                 <input 
                 placeholder='Enter Last Name'
                 onChange={handleLastNameChange}
             />
-            
+            </div>
+            <div className='input-box'>
                 <input 
                 placeholder='Enter Phone Number'
                 onChange={handlePhoneChange}
             />
+
+           
                 <input 
                 placeholder='Enter Email'
                 onChange={handleEmailChange}
                 />
             </div>
+            </div>  
         )
     }
     return(
         <div>
-            <div>
-                <EditSubmit 
+            <div className='title-bar'>
+                <EditSubmit
                     canEdit={canEdit}
                     setEdit={setEdit}
                 />
             </div>
-            {showSubmitted()}
+                
+            <div className= 'details-area'>
+                {showSubmitted()}
+            </div>
         </div>
     )
 }

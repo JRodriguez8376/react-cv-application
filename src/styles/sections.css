@@ -1,0 +1,46 @@
+.section {
+    border: 3px solid;
+    border-radius: 1em;
+    border-color: black;
+    margin-bottom: 0.5em;
+    padding: 1em;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    flex: 1;
+    margin: auto;
+
+}
+.title-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1;
+ 
+
+
+}
+.details-area {
+    text-align: left;
+    justify-content: flex-start;
+
+}
+.input-container {
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 1em;
+}
+.input-box {
+    padding-top: 0.5rem;
+
+    flex-basis: 0;
+    flex-grow: 1 1 100%;
+    flex: 1;
+    align-self: auto;
+
+    
+}
