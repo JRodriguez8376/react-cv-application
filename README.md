@@ -19,7 +19,7 @@ Lessons that I need to re-up on:
 
 Clean code, alot of times my components are messy, I actually revised the project because I did not like it enough. Even then, my organization leaves alot to be desired.
 
-CSS. Alot of CSS... My styling leaves MUCH to be desiered/
+CSS. Alot of CSS... My styling leaves MUCH to be desired.
 
 Functions inbuilt into JS objects, like map. I kept reading around on how I may re-render the DOM with new components from React, and alot suggested the use of .map or .filter, which iterates on arrays in JS. Unfortunately, none of my objects make use of arrays, or at least, the one's the user inputs into. Too much time to put into a project, when I can just fiddle around with React and apply these principles to the next project.
 
