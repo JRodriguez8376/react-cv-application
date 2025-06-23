@@ -2,7 +2,7 @@
 import General from './General';
 import Education from './Education';
 import WorkExperience from './WorkExperience'
-import Collapsible from './containers/Collapsible'
+import Collapsible from './Collapsible'
 import '../styles/InputForm.css'
 
 function InputForm({edit, setEdit, person, setPerson, jobs, setJob, schools, setSchool}) {
