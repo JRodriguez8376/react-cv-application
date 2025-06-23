@@ -1,10 +1,10 @@
-import {useState} from 'react';
+
 import General from './General';
 import Education from './Education';
 import WorkExperience from './WorkExperience'
-import Collapsible from './containers/Collapsible.jsx'
+import Collapsible from './containers/Collapsible'
 import '../styles/InputForm.css'
-import SubmitButton from './SubmitButton';
+
 function InputForm({edit, setEdit, person, setPerson, jobs, setJob, schools, setSchool}) {
     return(
         <div className='input-container'>
