@@ -1,84 +1,118 @@
-import {useState} from 'react';
-import EditSubmit from './EditSubmit';
+import { useState } from 'react';
 
-function Education({initialJob}) {
-    const [job, setJob] = useState(initialJob)
-    const [canEdit, setEdit] = useState(false);
+
+function Education({ jobs, setJob, edit }) {
+
 
     const handleCompanyChange = (e) => {
-        const newJob = {...job, companyName: e.target.value}
+        const newJob = { ...jobs, companyName: e.target.value }
         setJob(newJob);
     }
     const handlePositionChange = (e) => {
-        const newJob = {...job, position: e.target.value}
+        const newJob = { ...jobs, position: e.target.value }
         setJob(newJob);
     }
     const handleStartDateChange = (e) => {
-        const newJob = {...job, startDate: e.target.value}
+        const newJob = { ...jobs, startDate: e.target.value }
         setJob(newJob);
     }
     const handleEndDateChange = (e) => {
-        const newJob = {...job, endDate: e.target.value}
+        const newJob = { ...jobs, endDate: e.target.value }
         setJob(newJob);
     }
     const handleDescriptionChange = (e) => {
-        const newJob = {...job, description: e.target.value}
+        const newJob = { ...jobs, description: e.target.value }
         setJob(newJob);
     }
 
 
-    const showSubmitted = () =>  {
-        if(canEdit == false) {
-            return(
-                <div>
-                    <p>Company Name: {job.companyName}</p>
-                    <p>Position: {job.position}</p>
-                    <p>{job.startDate} to {job.endDate}</p>
-                    <p>Job Responsiblities: {job.description}</p>
-                </div>
-            
+    const showSubmitted = () => {
+        if (edit) {
+            return (
+                <>
+                    <div className='field-container'>
+                        <div className='field-group'>
+                            <p>Company Name:</p>
+                            <input
+                                placeholder={jobs.companyName}
+                                onChange={handleCompanyChange}
+                                maxLength={48}
+                            />
+                        </div>
+                        <div className='field-group'>
+                            <p>Position:</p>
+                            <input
+                                placeholder={jobs.position}
+                                onChange={handlePositionChange}
+                                maxLength={36}
+                            />
+                        </div>
+                    </div>
+                    <div className='field-container'>
+                        <div className='field-group'>
+                            <p>Start Date:</p>
+                            <input
+                                placeholder={jobs.startDate}
+                                onChange={handleStartDateChange}
+                                type='date'
+                            />
+                        </div>
+                        <div className='field-group'>
+                            <p>End Date:</p>
+                            <input
+                                placeholder={jobs.endDate}
+                                onChange={handleEndDateChange}
+                                type='date'
+                            />
+                        </div>
+                    </div>
+                    <div className='field-container'>
+                        <div className='field-group'>
+                            <p>Job Responsibilities & Description</p>
+                            <textarea
+                                placeholder={jobs.description}
+                                onChange={handleDescriptionChange}
+                                
+                            />
+                        </div>
+                    </div>
+                </>
             )
         }
-        return(
-            <div>
-            <p>Company Name: {job.companyName}</p>
-            <input 
-                placeholder={job.companyName}
-                onChange={handleCompanyChange}
-            />
-            <p>Position: {job.position}</p>
-            <input 
-                placeholder={job.position}
-                onChange={handlePositionChange}
-            />
-            <p>{job.startDate} to {job.endDate}</p>
-            <input 
-                placeholder={job.startDate}
-                onChange={handleStartDateChange}
-            />
-            <input 
-                placeholder={job.endDate}
-                onChange={handleEndDateChange}
-            />
-            <p>Job Responsiblities: {job.description}</p>
-            <input 
-                placeholder={job.description}
-                onChange={handleDescriptionChange}
-            />
-            </div>
+        return (
+            <>
+                <div className='field-container'>
+                    <div className='field-group'>
+                        <p>Company Name:</p>
+                        <p>{jobs.companyName}</p>
+                    </div>
+                    <div className='field-group'>
+                        <p>Position:</p>
+                        <p>{jobs.position}</p>
+                    </div>
+                </div>
+                <div className='field-container'>
+                    <div className='field-group'>
+                        <p>Start Date:</p>
+                        <p>{jobs.startDate}</p>
+                    </div>
+                    <div className='field-group'>
+                        <p>End Date:</p>
+                        <p>{jobs.endDate}</p>
+                    </div>
+                </div>
+                
+                    <div className='large-input-group'>
+                        <p>Job Responsibilities & Description</p>
+                        <span>{jobs.description}</span>
+                    </div>
+               
+            </>
         )
+
     }
-    return(
-        <div>
-            <div>
-                <EditSubmit 
-                    canEdit={canEdit}
-                    setEdit={setEdit}
-                />
-            </div>
-            {showSubmitted()}
-        </div>
-        
+    return (
+        showSubmitted()
     )
 }
 

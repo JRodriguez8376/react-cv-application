@@ -1,7 +1,7 @@
 import 'react'
 import { useState } from 'react'
-
-function Collapsible({ children }) {
+import '../../styles/collapsible.css'
+function Collapsible({title, children }) {
 
     const [showBody, setShowBody] = useState('false');
     const onClickHandler = (e) => {
@@ -11,7 +11,10 @@ function Collapsible({ children }) {
     return (
         <div className="collapsible">
             <div className="collapsible-header" onClick={onClickHandler}>
-                {showBody ? '▲' : '▼'}
+                
+                
+                <div>{showBody ? '▲' : '▼'}</div>
+                <div className='collapsible-title'>{title}</div>
             </div>
             { showBody && 
                 <div className="collapsible-content">

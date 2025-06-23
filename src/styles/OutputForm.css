@@ -1,0 +1,31 @@
+.resume {
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+    border: 1px solid grey;
+    padding: 1em;
+    box-shadow:  10px 20px 15px rgb(109, 109, 109);
+}
+.resume-header > h1, p { 
+    justify-self: left;
+}
+.section-header {
+    justify-self: left;
+}
+.item-header {
+    display: flex;
+    justify-content: space-between;
+}
+.item-body {
+    display: flex;
+    justify-content: start;
+}
+.item-body > p {
+    justify-self: left;
+    text-align: left;
+}
+.line-break {
+    border: 1px black solid;
+    background-color: black;
+}
+

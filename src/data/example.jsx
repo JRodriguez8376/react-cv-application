@@ -7,6 +7,7 @@ const personExample = {
     phone: '111-222-3333'
 }
 const jobExample = {
+    id: 0,
     companyName: 'Company Name',
      position: 'Position Title',
     description: 'Job Responsibilities',
@@ -14,6 +15,7 @@ const jobExample = {
     endDate: '6/15/2025'
 }
 const schoolExample = {
+    id:0,
     school: 'School Name',
     study: 'Title of Study',
     startDate: '1/1/2000',

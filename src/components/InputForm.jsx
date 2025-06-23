@@ -1,12 +1,16 @@
 import {useState} from 'react';
 import General from './General';
-import Collapsible from './containers/collapsible';
-function InputForm({edit, setEdit, person, setPerson, job, setJob, school, SetSchool}) {
-
+import Education from './Education';
+import WorkExperience from './WorkExperience'
+import Collapsible from './containers/Collapsible'
+import '../styles/InputForm.css'
+import SubmitButton from './SubmitButton';
+function InputForm({edit, setEdit, person, setPerson, jobs, setJob, schools, setSchool}) {
     return(
-        <div>
-            {console.log(person)}
-            <Collapsible>
+        <div className='input-container'>
+            <Collapsible
+                title = {'General'}
+            >
             <General 
                 edit={edit}
                 person={person}
@@ -14,7 +18,28 @@ function InputForm({edit, setEdit, person, setPerson, job, setJob, school, SetSc
                 >
                 </General>
             </Collapsible>
+            <Collapsible
+                title={'Education'}
+            >
+            <Education
+                edit={edit}
+                schools={schools}
+                setSchool={setSchool}
+            ></Education>
+            </Collapsible>
             
+            <Collapsible
+                title={'Experience'}
+            >
+                <WorkExperience
+                edit={edit}
+                jobs={jobs}
+                setJob={setJob}
+                >
+
+                </WorkExperience>
+            </Collapsible>
+
         </div>
     )
 }
