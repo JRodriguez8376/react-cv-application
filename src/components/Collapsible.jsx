@@ -1,6 +1,5 @@
-import 'react'
 import { useState } from 'react'
-import '../styles/collapsible.css'
+import '../styles/Collapsible.css'
 function Collapsible({title, children }) {
 
     const [showBody, setShowBody] = useState('false');
